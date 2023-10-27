@@ -3,7 +3,7 @@ const tipForm = document.querySelector(".tip__form");
 const peaopleAmountInput = document.querySelector("#peopleamount");
 const totalBillInput = document.querySelector("#billvalue");
 const customTipInput = document.querySelector("#customtip");
-const AllTipElements = document.querySelector(".selecttip__options");
+const tipOptions = document.querySelector(".selecttip__options");
 
 const tipAmountHTML = document.querySelector(".tip__amount h2 span");
 const totalBillHTML = document.querySelector(".bill-total h2 span");
@@ -31,7 +31,7 @@ const handleChange = ({ target }) => {
 const handleClick = ({ target }) => {
   const isButtonClicked = target.tagName === "BUTTON";
   const tipPercent = target.textContent;
-
+  
   removeActiveClasses();
 
   if (isButtonClicked) {
@@ -63,7 +63,8 @@ const handleReset = ({ target }) => {
 const setCustomTipValue = (event) => (tip = Number(event.target.value) / 100);
 
 const removeActiveClasses = () => {
-  tipsBtnList.forEach((tipBtn) => tipBtn.classList.remove("active"));
+  tipOptions.querySelectorAll("button")
+    .forEach((tipBtn) => tipBtn.classList.remove("active"));
 };
 
 const resetAppData = (target) => {
@@ -98,7 +99,7 @@ const calculateBill = (totalBill, peopleAmount) => {
 
 const showResultInDOM = (element, value) => (element.textContent = value);
 
-AllTipElements.addEventListener("click", handleClick);
+tipOptions.addEventListener("click", handleClick);
 customTipInput.addEventListener("change", setCustomTipValue);
 peaopleAmountInput.addEventListener("input", handleChange);
 tipForm.addEventListener("submit", handleSubmit);

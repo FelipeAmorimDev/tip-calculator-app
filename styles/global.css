@@ -4,10 +4,10 @@
   --cyan-900: hsl(183, 100%, 15%);
   --cyan-700: hsl(186, 14%, 43%);
   --cyan-600: hsl(184, 14%, 56%);
-  --cyan-500: #9FE8DF;
+  --cyan-500: #9fe8df;
   --cyan-400: hsl(185, 41%, 84%);
   --cyan-300: hsl(189, 41%, 97%);
-  
+
   --white: hsl(0, 0%, 100%);
 }
 
@@ -34,7 +34,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -79,4 +79,3 @@ button {
   background-color: var(--color-primary) !important;
   color: var(--cyan-900) !;
 }
-
