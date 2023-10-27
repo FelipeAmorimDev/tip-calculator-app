@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Tip calculator app</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="./images/logo.svg" alt="Splitter Logo" />
+      </header>
+      <main class="app">
+        <form class="tip__form">
+          <label for="billvalue">Bill</label>
+          <input type="text" name="billvalue" id="billvalue" placeholder="0" />
+          <div class="tip__result">
+            <label for="customtip">Select Tip %</label>
+            <div class="selecttip__options">
+              <button>5%</button>
+              <button>10%</button>
+              <button>15%</button>
+              <button>25%</button>
+              <button>50%</button>
+              <input
+                type="text"
+                name="customtip"
+                id="customtip"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+          <label for="peopleamount">Number of People</label>
+          <input
+            type="text"
+            name="peopleamount"
+            id="peopleamount"
+            placeholder="0"
+          />
+        </form>
+        <div class="tip__result">
+          <div class="tip__amount">
+            <header>
+              <strong>Tip Amount</strong>
+              <span>/ person</span>
+            </header>
+            <h2>$0.00</h2>
+          </div>
+          <div class="bill-total">
+            <header>
+              <strong>Total</strong>
+              <span>/ person</span>
+            </header>
+            <h2>$0.00</h2>
+          </div>
+          <button>RESET</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
