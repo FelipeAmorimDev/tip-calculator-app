@@ -26,10 +26,6 @@
   outline-color: var(--color-primary);
 }
 
-button:disabled {
-  
-}
-
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

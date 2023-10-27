@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="description" content="Tips Calculator" />
     <link
       rel="icon"
       type="image/png"
@@ -21,26 +21,24 @@
   </head>
   <body>
     <div class="app">
-      <header class="header container">
-        <img src="./images/logo.svg" alt="Splitter Logo" />
+      <header class="header container" aria-label="Header">
+        <a href="/"><img src="./images/logo.svg" alt="Splitter Logo" /></a>
       </header>
-      <main class="tip container">
+      <main class="tip container" aria-label="Principal">
         <form class="tip__form">
           <input type="submit" style="position: absolute; left: -2000px" />
-          <div>
+          <div class="bill__input">
             <label for="billvalue" class="bill__label">Bill</label>
-            <div class="bill__input">
-              <input
-                type="number"
-                name="billvalue"
-                id="billvalue"
-                min="0"
-                placeholder="0"
-                oninput="this.value = Math.abs(this.value)"
-              />
-            </div>
+            <input
+              type="number"
+              name="billvalue"
+              id="billvalue"
+              min="0"
+              placeholder="0"
+              oninput="this.value = Math.abs(this.value)"
+            />
           </div>
-          <div>
+          <div class="bill__tip">
             <label for="customtip" class="customtip__label">Select Tip %</label>
             <div class="selecttip__options">
               <button type="button">5%</button>
@@ -58,14 +56,13 @@
               />
             </div>
           </div>
-          <div>
+          <div class="bill__people">
             <div class="people__wrapper">
               <label for="peopleamount" class="peopleamount__label"
                 >Number of People</label
               >
               <div class="feedback-error hidden">Can’t be zero</div>
             </div>
-
             <div class="peopleamount__input">
               <input
                 type="number"
@@ -94,7 +91,6 @@
               <h2>$<span>0.00</span></h2>
             </div>
           </div>
-
           <button type="button">RESET</button>
         </div>
       </main>
