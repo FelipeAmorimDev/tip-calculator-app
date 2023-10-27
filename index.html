@@ -20,16 +20,25 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <div class="container">
-      <header class="header">
+    <div class="app">
+      <header class="header container">
         <img src="./images/logo.svg" alt="Splitter Logo" />
       </header>
-      <main class="app">
+      <main class="tip container">
         <form class="tip__form">
-          <label for="billvalue">Bill</label>
-          <input type="text" name="billvalue" id="billvalue" placeholder="0" />
-          <div class="tip__result">
-            <label for="customtip">Select Tip %</label>
+          <div>
+            <label for="billvalue" class="bill__label">Bill</label>
+            <div class="bill__input">
+              <input
+                type="text"
+                name="billvalue"
+                id="billvalue"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="customtip" class="customtip__label">Select Tip %</label>
             <div class="selecttip__options">
               <button>5%</button>
               <button>10%</button>
@@ -44,29 +53,38 @@
               />
             </div>
           </div>
-          <label for="peopleamount">Number of People</label>
-          <input
-            type="text"
-            name="peopleamount"
-            id="peopleamount"
-            placeholder="0"
-          />
+          <div>
+            <label for="peopleamount" class="peopleamount__label"
+              >Number of People</label
+            >
+            <div class="peopleamount__input">
+              <input
+                type="text"
+                name="peopleamount"
+                id="peopleamount"
+                placeholder="0"
+              />
+            </div>
+          </div>
         </form>
         <div class="tip__result">
-          <div class="tip__amount">
-            <header>
-              <strong>Tip Amount</strong>
-              <span>/ person</span>
-            </header>
-            <h2>$0.00</h2>
+          <div class="tip__infos">
+            <div class="tip__amount">
+              <header>
+                <strong>Tip Amount</strong>
+                <span>/ person</span>
+              </header>
+              <h2>$0.00</h2>
+            </div>
+            <div class="bill-total">
+              <header>
+                <strong>Total</strong>
+                <span>/ person</span>
+              </header>
+              <h2>$0.00</h2>
+            </div>
           </div>
-          <div class="bill-total">
-            <header>
-              <strong>Total</strong>
-              <span>/ person</span>
-            </header>
-            <h2>$0.00</h2>
-          </div>
+
           <button>RESET</button>
         </div>
       </main>
