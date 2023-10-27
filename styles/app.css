@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 5.49rem;
+  margin-top: 10.1875rem;
 }
 
 .tip {
@@ -12,6 +13,12 @@
   align-items: center;
   display: flex;
   gap: 3rem;
+}
+
+@media (max-width: 1000px) {
+  .tip {
+    flex-direction: column;
+  }
 }
 
 .tip__form {
@@ -38,7 +45,7 @@
   color: var(--white);
   border-radius: 5px;
 
-  transition: color .1s, background .1s;
+  transition: color 0.1s, background 0.1s;
 }
 
 .selecttip__options button:hover {
@@ -73,12 +80,12 @@
   padding-right: 17px;
 }
 
-.peopleamount__input{
+.peopleamount__input {
   position: relative;
   margin-top: 6px;
 }
 
-.peopleamount__input input{
+.peopleamount__input input {
   width: 100%;
   padding-right: 17px;
 }
@@ -101,6 +108,7 @@
   color: var(--cyan-700);
 }
 
+
 .tip__result {
   width: 413px;
   height: 417px;
@@ -113,8 +121,7 @@
   justify-content: space-between;
 }
 
-
-.tip__amount{
+.tip__amount {
   margin-bottom: 25px;
 }
 
@@ -156,9 +163,46 @@
   color: var(--cyan-900);
   font-size: 1.25rem;
   justify-self: flex-end;
-  transition: background .1s;
+  transition: background 0.1s;
 }
 
 .tip__result button:hover {
   background: var(--cyan-500);
+}
+
+
+@media (max-width: 1000px) {
+  .tip {
+    padding: 2rem;
+    gap: 2rem;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+
+  }
+  .selecttip__options {
+    grid-template-columns: repeat(2, 146.63px);
+  }
+  .tip__amount h2,
+  .bill-total h2 {
+    font-size: 2rem;
+    color: var(--color-primary);
+  }
+  .tip__result {
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+    padding: 2.3125rem 1.375rem 1.5rem 1.5rem;
+  }
+
+  .tip__amount {
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (max-width:600px){
+  .header {
+    margin-top: 3.125rem;
+    margin-bottom: 2.5rem;
+  }
 }

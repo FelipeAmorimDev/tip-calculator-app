@@ -26,15 +26,19 @@
   outline-color: var(--color-primary);
 }
 
+button:disabled {
+  background-color: #0D686D !important;
+  color: rgba(0, 71, 75, 0.35);
+  cursor:not-allowed;
+}
+
 body {
   font-family: "Space Mono", monospace;
   font-size: 1.5rem;
   font-weight: 700;
   background: var(--cyan-400);
-  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 img {
