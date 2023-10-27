@@ -12,6 +12,7 @@ const tipsBtnList = document.querySelectorAll(".selecttip__options button");
 const resetData = document.querySelector(".tip__result button");
 
 const feedbackError = document.querySelector(".feedback-error");
+
 let tip = 0;
 
 const changeFeedbackClass = (element, element2, add, remove) => {
@@ -82,8 +83,8 @@ const showElementInDOMIfPossible = (condicional) => {
     );
 
     resetData.setAttribute("class", "resetactive");
-    showResultInDOM(tipAmountHTML, tipAmountDivided);
-    showResultInDOM(totalBillHTML, totalBillDivided);
+    showResultInDOM(tipAmountHTML, tipAmountDivided.toFixed(2));
+    showResultInDOM(totalBillHTML, totalBillDivided.toFixed(2));
   } else {
     changeFeedbackClass(feedbackError,peaopleAmountInput,"input-error","hidden");
   }
