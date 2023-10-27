@@ -26,40 +26,50 @@
       </header>
       <main class="tip container">
         <form class="tip__form">
+          <input type="submit" style="position: absolute; left: -2000px" />
           <div>
             <label for="billvalue" class="bill__label">Bill</label>
             <div class="bill__input">
               <input
-                type="text"
+                type="number"
                 name="billvalue"
                 id="billvalue"
+                min="0"
                 placeholder="0"
+                oninput="this.value = Math.abs(this.value)"
               />
             </div>
           </div>
           <div>
             <label for="customtip" class="customtip__label">Select Tip %</label>
             <div class="selecttip__options">
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
-              <button>25%</button>
-              <button>50%</button>
+              <button type="button">5%</button>
+              <button type="button">10%</button>
+              <button type="button">15%</button>
+              <button type="button">25%</button>
+              <button type="button">50%</button>
               <input
-                type="text"
+                type="number"
+                min="0"
                 name="customtip"
                 id="customtip"
                 placeholder="Custom"
+                oninput="this.value = Math.abs(this.value)"
               />
             </div>
           </div>
           <div>
-            <label for="peopleamount" class="peopleamount__label"
-              >Number of People</label
-            >
+            <div class="people__wrapper">
+              <label for="peopleamount" class="peopleamount__label"
+                >Number of People</label
+              >
+              <div class="feedback-error hidden">Can’t be zero</div>
+            </div>
+
             <div class="peopleamount__input">
               <input
-                type="text"
+                type="number"
+                min="0"
                 name="peopleamount"
                 id="peopleamount"
                 placeholder="0"
@@ -74,18 +84,18 @@
                 <strong>Tip Amount</strong>
                 <span>/ person</span>
               </header>
-              <h2>$0.00</h2>
+              <h2>$<span>0.00</span></h2>
             </div>
             <div class="bill-total">
               <header>
                 <strong>Total</strong>
                 <span>/ person</span>
               </header>
-              <h2>$0.00</h2>
+              <h2>$<span>0.00</span></h2>
             </div>
           </div>
 
-          <button  type="button" disabled>RESET</button>
+          <button type="button">RESET</button>
         </div>
       </main>
     </div>

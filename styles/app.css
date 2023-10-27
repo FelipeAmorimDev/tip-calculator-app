@@ -45,11 +45,11 @@
   color: var(--white);
   border-radius: 5px;
 
-  transition: color 0.1s, background 0.1s;
+  transition: color 0.4s, background 0.3s;
 }
 
 .selecttip__options button:hover {
-  background-color: var(--color-primary);
+  background-color: var(--cyan-500);
   color: var(--cyan-900);
 }
 
@@ -88,7 +88,7 @@
 .peopleamount__input input {
   width: 100%;
   padding-right: 17px;
-}
+ }
 
 .peopleamount__input::before {
   content: "";
@@ -158,18 +158,37 @@
 
 .tip__result button {
   width: 100%;
-  background: var(--color-primary);
   border-radius: 5px;
-  color: var(--cyan-900);
   font-size: 1.25rem;
   justify-self: flex-end;
   transition: background 0.1s;
+  background-color: #0D686D ;
+  color: rgba(0, 71, 75, 0.35);
+  cursor:not-allowed;
 }
 
-.tip__result button:hover {
+.tip__result button.resetactive:hover {
   background: var(--cyan-500);
 }
 
+.people__wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feedback-error{
+  font-size: 1rem;
+  color: #E17457;
+}
+
+.input-error {
+  outline-color: #E17052;
+}
+
+.hidden {
+  opacity: 0;
+}
 
 @media (max-width: 1000px) {
   .tip {
@@ -205,4 +224,10 @@
     margin-top: 3.125rem;
     margin-bottom: 2.5rem;
   }
+}
+
+.tip__result button.resetactive {
+  background-color: var(--color-primary) ;
+  color: rgba(0, 71, 75, 0.35);
+  cursor:pointer;
 }
